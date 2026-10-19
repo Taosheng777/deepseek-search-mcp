@@ -1,0 +1,35 @@
+[project]
+name = "deepseek-search-mcp"
+version = "0.3.0"
+description = "MCP server for DeepSeek self-built web Search/Fetch API"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "涛生 (Taosheng777)" }]
+keywords = ["mcp", "deepseek", "web-search", "claude-code", "codex", "model-context-protocol"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=2.3,<3",
+]
+
+[project.urls]
+Homepage = "https://github.com/Taosheng777/deepseek-search-mcp"
+Issues = "https://github.com/Taosheng777/deepseek-search-mcp/issues"
+
+[project.scripts]
+deepseek-search-mcp = "deepseek_search_mcp.server:main"
+
+[build-system]
+requires = ["uv_build>=0.11.8,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
